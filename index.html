@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_787f40fc6820176960bef74098d57faa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_787f40fc6820176960bef74098d57faa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_787f40fc6820176960bef74098d57faa = L.map(
+                "map_787f40fc6820176960bef74098d57faa",
+                {
+                    center: [55.821097, 37.641045],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_721879243cc292f6227aa775bfce6a78 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_721879243cc292f6227aa775bfce6a78.addTo(map_787f40fc6820176960bef74098d57faa);
+        
+    
+            var marker_0cf4bec7fbc60fe50bdcb8645b994947 = L.marker(
+                [55.821097, 37.641045],
+                {
+}
+            ).addTo(map_787f40fc6820176960bef74098d57faa);
+        
+    
+            var icon_4469295457ee4548a8e098bd265de607 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79df87ff534faa10581c5535e219e0ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f7879a80182435ce29bfb8660c4f00e = $(`<div id="html_4f7879a80182435ce29bfb8660c4f00e" style="width: 100.0%; height: 100.0%;">Я тут</div>`)[0];
+                popup_79df87ff534faa10581c5535e219e0ea.setContent(html_4f7879a80182435ce29bfb8660c4f00e);
+            
+        
+
+        marker_0cf4bec7fbc60fe50bdcb8645b994947.bindPopup(popup_79df87ff534faa10581c5535e219e0ea)
+        ;
+
+        
+    
+    
+            marker_0cf4bec7fbc60fe50bdcb8645b994947.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0cf4bec7fbc60fe50bdcb8645b994947.setIcon(icon_4469295457ee4548a8e098bd265de607);
+            
+    
+            var marker_85b276dd08689c61128c6ec451ad90ba = L.marker(
+                [55.82063377623158, 37.642025999999994],
+                {
+}
+            ).addTo(map_787f40fc6820176960bef74098d57faa);
+        
+    
+            var icon_5efb1f9c5a77a9920816013ee5d0510f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "coffee",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2bd34902c7f0c7730bb3586f5200c045 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00e1e3c9160107a4da16a8924080ac2b = $(`<div id="html_00e1e3c9160107a4da16a8924080ac2b" style="width: 100.0%; height: 100.0%;">Расстояние: 0.08 км</div>`)[0];
+                popup_2bd34902c7f0c7730bb3586f5200c045.setContent(html_00e1e3c9160107a4da16a8924080ac2b);
+            
+        
+
+        marker_85b276dd08689c61128c6ec451ad90ba.bindPopup(popup_2bd34902c7f0c7730bb3586f5200c045)
+        ;
+
+        
+    
+    
+            marker_85b276dd08689c61128c6ec451ad90ba.bindTooltip(
+                `<div>
+                     One price coffe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_85b276dd08689c61128c6ec451ad90ba.setIcon(icon_5efb1f9c5a77a9920816013ee5d0510f);
+            
+    
+            var marker_2fa4d5d5a6d8d01fa159df725e965ba6 = L.marker(
+                [55.82005377606224, 37.64791999999999],
+                {
+}
+            ).addTo(map_787f40fc6820176960bef74098d57faa);
+        
+    
+            var icon_c513641a6434b39fafe0d9c634280d12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "coffee",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f840962de183678d2ef34a5f1c8bddb7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c83e3ad904dc369b0fa9b5c97778df5b = $(`<div id="html_c83e3ad904dc369b0fa9b5c97778df5b" style="width: 100.0%; height: 100.0%;">Расстояние: 0.45 км</div>`)[0];
+                popup_f840962de183678d2ef34a5f1c8bddb7.setContent(html_c83e3ad904dc369b0fa9b5c97778df5b);
+            
+        
+
+        marker_2fa4d5d5a6d8d01fa159df725e965ba6.bindPopup(popup_f840962de183678d2ef34a5f1c8bddb7)
+        ;
+
+        
+    
+    
+            marker_2fa4d5d5a6d8d01fa159df725e965ba6.bindTooltip(
+                `<div>
+                     Cafe Olive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2fa4d5d5a6d8d01fa159df725e965ba6.setIcon(icon_c513641a6434b39fafe0d9c634280d12);
+            
+    
+            var marker_5ca61f4c20fa712460158aa2f8bfbdf2 = L.marker(
+                [55.822486776772706, 37.648469],
+                {
+}
+            ).addTo(map_787f40fc6820176960bef74098d57faa);
+        
+    
+            var icon_9c3484967f87827c4f5d7330c2971993 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "coffee",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d05c3b769a4c5d31ba7bae1d6c089e79 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_179ce08c3a89d22468bfa016a7920110 = $(`<div id="html_179ce08c3a89d22468bfa016a7920110" style="width: 100.0%; height: 100.0%;">Расстояние: 0.49 км</div>`)[0];
+                popup_d05c3b769a4c5d31ba7bae1d6c089e79.setContent(html_179ce08c3a89d22468bfa016a7920110);
+            
+        
+
+        marker_5ca61f4c20fa712460158aa2f8bfbdf2.bindPopup(popup_d05c3b769a4c5d31ba7bae1d6c089e79)
+        ;
+
+        
+    
+    
+            marker_5ca61f4c20fa712460158aa2f8bfbdf2.bindTooltip(
+                `<div>
+                     Кофе с собой
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5ca61f4c20fa712460158aa2f8bfbdf2.setIcon(icon_9c3484967f87827c4f5d7330c2971993);
+            
+    
+            var marker_13ef4b9cc748fa5aa33f1b88790949f0 = L.marker(
+                [55.815419774709454, 37.639563],
+                {
+}
+            ).addTo(map_787f40fc6820176960bef74098d57faa);
+        
+    
+            var icon_6f23fff3bda02fa40e684a19c0caf54b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "coffee",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d7df9ad65592efd1fd738f83b565e35d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_551114ae4af9e8c86ac66f12f029dd85 = $(`<div id="html_551114ae4af9e8c86ac66f12f029dd85" style="width: 100.0%; height: 100.0%;">Расстояние: 0.64 км</div>`)[0];
+                popup_d7df9ad65592efd1fd738f83b565e35d.setContent(html_551114ae4af9e8c86ac66f12f029dd85);
+            
+        
+
+        marker_13ef4b9cc748fa5aa33f1b88790949f0.bindPopup(popup_d7df9ad65592efd1fd738f83b565e35d)
+        ;
+
+        
+    
+    
+            marker_13ef4b9cc748fa5aa33f1b88790949f0.bindTooltip(
+                `<div>
+                     Omens Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_13ef4b9cc748fa5aa33f1b88790949f0.setIcon(icon_6f23fff3bda02fa40e684a19c0caf54b);
+            
+    
+            var marker_2d699a60e3eb3777d2d693e5cf35ea27 = L.marker(
+                [55.81761377534987, 37.649553000000004],
+                {
+}
+            ).addTo(map_787f40fc6820176960bef74098d57faa);
+        
+    
+            var icon_507cee838022f0e9c90c154a4fe376f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "coffee",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42ab66cdb28905a579a766177c027cf6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f81dcbadf9626ed901ce16e536b88323 = $(`<div id="html_f81dcbadf9626ed901ce16e536b88323" style="width: 100.0%; height: 100.0%;">Расстояние: 0.66 км</div>`)[0];
+                popup_42ab66cdb28905a579a766177c027cf6.setContent(html_f81dcbadf9626ed901ce16e536b88323);
+            
+        
+
+        marker_2d699a60e3eb3777d2d693e5cf35ea27.bindPopup(popup_42ab66cdb28905a579a766177c027cf6)
+        ;
+
+        
+    
+    
+            marker_2d699a60e3eb3777d2d693e5cf35ea27.bindTooltip(
+                `<div>
+                     Кофе
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2d699a60e3eb3777d2d693e5cf35ea27.setIcon(icon_507cee838022f0e9c90c154a4fe376f2);
+            
+</script>
+</html>
