@@ -23,6 +23,10 @@ def fetch_coordinates(apikey, address):
     lon, lat = most_relevant['GeoObject']['Point']['pos'].split(" ")
     return lat, lon
 
+def get_coffee_closest(coffee_name):
+    return coffee_name['distance']
+
+
 
 def main():
     load_dotenv()
@@ -52,10 +56,9 @@ def main():
             "latitude" : (coffee_lat),
             "longitude" : (coffee_lon)
             })
-    
+    sort_list_coffe = sorted(coffee_list, key=get_coffee_closest)
     print("Ваши координаты", user_coords)
-    pprint(coffee_list)
-
+    pprint(sort_list_coffe[:5])
 
 if __name__ == '__main__':
     main()
