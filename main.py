@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+import folium
 from dotenv import load_dotenv
 from geopy import distance
 from pprint import pprint
@@ -21,7 +22,7 @@ def fetch_coordinates(apikey, address):
 
     most_relevant = found_places[0]
     lon, lat = most_relevant['GeoObject']['Point']['pos'].split(" ")
-    return lat, lon
+    return float(lat), float(lon)
 
 def get_coffee_closest(coffee_name):
     return coffee_name['distance']
@@ -57,8 +58,26 @@ def main():
             "longitude" : (coffee_lon)
             })
     sort_list_coffe = sorted(coffee_list, key=get_coffee_closest)
+    
     print("Ваши координаты", user_coords)
-    pprint(sort_list_coffe[:5])
+    
+    mape = folium.Map(location=[user_coords[0],user_coords[1]], zoom_start=12)
+   
+    folium.Marker(
+        location=[user_coords[0],user_coords[1]],
+        tooltip="Click me!",
+        popup="Я тут",
+        icon=folium.Icon(color="red", icon="user"),
+    ).add_to(mape)
+    for coffee in sort_list_coffe[:5]:
+        folium.Marker(
+            location=[coffee["latitude"], coffee["longitude"]],
+            tooltip=coffee["title"],
+            popup=f"Расстояние: {coffee['distance']} км",
+            icon=folium.Icon(color="green", icon="coffee"),
+        ).add_to(mape)
+    mape.save("index.html")
+
 
 if __name__ == '__main__':
     main()
