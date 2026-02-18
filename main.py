@@ -58,9 +58,7 @@ def main():
             "longitude" : (coffee_lon)
             })
     sort_list_coffe = sorted(coffee_list, key=get_coffee_closest)
-    
-    print("Ваши координаты", user_coords)
-    
+        
     mape = folium.Map(location=[user_coords[0],user_coords[1]], zoom_start=12)
    
     folium.Marker(
